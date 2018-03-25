@@ -5719,11 +5719,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeWIthKaren/TicTakToeWIthKaren.csproj",
+      "projectUniqueName": "/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/TicTakToeWIthKaren.csproj",
       "projectName": "TicTakToeWIthKaren",
-      "projectPath": "/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeWIthKaren/TicTakToeWIthKaren.csproj",
+      "projectPath": "/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/TicTakToeWIthKaren.csproj",
       "packagesPath": "/Users/jordan.elley/.nuget/packages/",
-      "outputPath": "/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeWIthKaren/obj/",
+      "outputPath": "/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

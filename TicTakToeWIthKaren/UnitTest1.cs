@@ -1,14 +1,17 @@
-using System;
 using Xunit;
 
 namespace TicTakToeWIthKaren
 {
-    public class UnitTest1
+    public class MoveShould
     {
         [Fact]
-        public void Test1()
+        public void InitialiseClass()
         {
-            Assert.True(true);
+            var newMove = new Move();
         }
+    }
+
+    public class Move
+    {
     }
 }

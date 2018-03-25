@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/TicTakToeApp.csproj",
+      "projectUniqueName": "/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeApp/TicTakToeApp.csproj",
       "projectName": "TicTakToeApp",
-      "projectPath": "/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/TicTakToeApp.csproj",
+      "projectPath": "/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeApp/TicTakToeApp.csproj",
       "packagesPath": "/Users/jordan.elley/.nuget/packages/",
-      "outputPath": "/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/obj/",
+      "outputPath": "/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeApp/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

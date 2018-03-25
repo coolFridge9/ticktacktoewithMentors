@@ -11,3 +11,16 @@
 /Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.AssemblyInfo.cs
 /Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.dll
 /Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.pdb
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netcoreapp10.dll
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/xunit.runner.utility.netcoreapp10.dll
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.deps.json
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.runtimeconfig.json
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.runtimeconfig.dev.json
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.dll
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.pdb
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.csproj.CoreCompileInputs.cache
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.AssemblyInfoInputs.cache
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.AssemblyInfo.cs
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.dll
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.pdb
