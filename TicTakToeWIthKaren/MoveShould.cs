@@ -5,10 +5,16 @@ namespace TicTakToeWIthKaren
 {
     public class MoveShould
     {
+
         [Fact]
-        public void InitialiseWithCoordinates()
+        public void ReturnInitialisedCoordinates()
         {
             var move = new Move(2,2);
+            Assert.Equal(2, move.X);
+            Assert.Equal(2, move.Y);
         }
+        
     }
+    
+    
 }

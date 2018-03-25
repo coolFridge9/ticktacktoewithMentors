@@ -1,17 +1,14 @@
-using System.Runtime.CompilerServices;
-
 namespace TicTakToeApp
 {
     public class Move
     {
-        private int _x;
-        private int _y;
+        public readonly int X;
+        public readonly int Y;
         
         public Move(int x, int y)
         {
-            _x = x;
-            _y = y;
+            X = x;
+            Y = y;
         }
-
     }
 }

@@ -21,6 +21,7 @@
       </e>
       <e p="TicTakToeWIthKaren" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="MoveShould.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
@@ -30,7 +31,6 @@
           </e>
         </e>
         <e p="TicTakToeWIthKaren.csproj" t="IncludeRecursive" />
-        <e p="UnitTest1.cs" t="Include" />
       </e>
       <e p="TicTakToeWIthKaren.sln" t="IncludeFlat" />
     </e>
