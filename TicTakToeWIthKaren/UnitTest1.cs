@@ -6,9 +6,9 @@ namespace TicTakToeWIthKaren
     public class MoveShould
     {
         [Fact]
-        public void InitialiseClass()
+        public void InitialiseWithCoordinates()
         {
-            var newMove = new Move();
+            var move = new Move(2,2);
         }
     }
 }
