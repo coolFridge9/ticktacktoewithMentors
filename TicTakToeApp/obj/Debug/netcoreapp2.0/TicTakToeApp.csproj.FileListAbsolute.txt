@@ -1,0 +1,10 @@
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.deps.json
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.runtimeconfig.json
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.runtimeconfig.dev.json
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.dll
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.pdb
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.csproj.CoreCompileInputs.cache
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.AssemblyInfoInputs.cache
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.AssemblyInfo.cs
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.dll
+/Users/jordan.elley/code/interface practice/TicTakToeWIthKaren/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.pdb
