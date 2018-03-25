@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.0": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeApp/TicTakToeApp.csproj": {
+            "projectPath": "/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeApp/TicTakToeApp.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

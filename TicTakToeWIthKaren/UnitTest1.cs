@@ -1,3 +1,4 @@
+using TicTakToeApp;
 using Xunit;
 
 namespace TicTakToeWIthKaren
@@ -9,9 +10,5 @@ namespace TicTakToeWIthKaren
         {
             var newMove = new Move();
         }
-    }
-
-    public class Move
-    {
     }
 }

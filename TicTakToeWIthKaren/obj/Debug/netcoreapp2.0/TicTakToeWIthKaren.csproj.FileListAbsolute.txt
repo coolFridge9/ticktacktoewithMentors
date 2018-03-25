@@ -24,3 +24,5 @@
 /Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.AssemblyInfo.cs
 /Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.dll
 /Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.pdb
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeApp.dll
+/Users/jordan.elley/code/TicTakTOeWithMentors/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeApp.pdb
