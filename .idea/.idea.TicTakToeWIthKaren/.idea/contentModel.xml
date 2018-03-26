@@ -9,6 +9,7 @@
       <e p="TicTakToeApp" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Move.cs" t="Include" />
+        <e p="MoveList.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
@@ -18,6 +19,7 @@
         </e>
         <e p="Program.cs" t="Include" />
         <e p="TicTakToeApp.csproj" t="IncludeRecursive" />
+        <e p="WinChecker.cs" t="Include" />
       </e>
       <e p="TicTakToeWIthKaren" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
