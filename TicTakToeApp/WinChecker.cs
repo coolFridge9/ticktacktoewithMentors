@@ -6,9 +6,9 @@ namespace TicTakToeApp
     {
         public static readonly int SizeOfBoard = 3;
         
-        public bool CheckIfUserWon(MoveList moveList) //rename vertical something
+        public bool CheckForWin(MoveList moveList) //rename vertical something
         {
-            var xCoordinates = AddXCoordinatesIntoSortedList(moveList.UserMoveList); //x coordinates is for vertical
+            var xCoordinates = AddXCoordinatesIntoSortedList(moveList.Moves); //x coordinates is for vertical
             return ContainsStraightLine(xCoordinates);
         }
 
