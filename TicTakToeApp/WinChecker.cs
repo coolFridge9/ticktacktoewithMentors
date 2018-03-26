@@ -4,9 +4,11 @@ namespace TicTakToeApp
 {
     public class WinChecker
     {
+        public static readonly int SizeOfBoard = 3;
+        
         public bool CheckIfUserWon(MoveList moveList) //rename vertical something
         {
-            var xCoordinates = AddXCoordinatesIntoSortedList(moveList.UserMoveList);
+            var xCoordinates = AddXCoordinatesIntoSortedList(moveList.UserMoveList); //x coordinates is for vertical
             return ContainsStraightLine(xCoordinates);
         }
 
@@ -28,7 +30,7 @@ namespace TicTakToeApp
             {
                 count = GetCount(count, listOfCoordinates[i], listOfCoordinates[i - 1]);
 
-                if (count == MoveList.SizeOfBoard-1)
+                if (count == SizeOfBoard-1)
                     return true;
             }
 

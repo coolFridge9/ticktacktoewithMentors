@@ -7,7 +7,8 @@ namespace TicTakToeApp
     {
         public readonly List<Move> UserMoveList = new List<Move>();
         public readonly List<Move> ComputerMoveList = new List<Move>();
-        public static readonly int SizeOfBoard = 3;
+        public readonly List<Move> Moves = new List<Move>();
+        
         
         public void AddUserMove(Move move)
         {
@@ -17,6 +18,11 @@ namespace TicTakToeApp
         public void AddComputerMove(Move move)
         {
             ComputerMoveList.Add(move);
+        }
+
+        public void AddMove(Move move)
+        {
+            Moves.Add(move);
         }
     }
 }
