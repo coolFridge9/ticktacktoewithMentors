@@ -18,5 +18,10 @@ namespace TicTakToeApp
             Regex format = new Regex("^q$|^-?[0-9],-?[0-9]$");
             return format.IsMatch(input);
         }
+
+        public bool DidQuit(string input)
+        {
+            return input == "q";
+        }
     }
 }

@@ -28,6 +28,14 @@ namespace TicTakToeWIthKaren
             bool valid = inputHandler.Validate(input);
             Assert.False(valid);
         }
+
+        [Fact]
+        public void TellIfUserQuits()
+        {
+            var inputHandler = new UserInputHandler();
+            bool quit = inputHandler.DidQuit("q");
+            Assert.True(quit);
+        }
         
     }
 }
