@@ -1,5 +1,4 @@
-using System;
-using System.Text.RegularExpressions;
+using TicTakToeApp;
 using Xunit;
 
 namespace TicTakToeWIthKaren
@@ -8,31 +7,27 @@ namespace TicTakToeWIthKaren
     {
         
         [Theory]
-        //[InlineData("1,1")]
-        //[InlineData("-3,2")]
+        [InlineData("1,1")]
+        [InlineData("-3,2")]
         [InlineData("q")]
+        [InlineData("-2,-2")]
         public void ValidateCorrectInput(string input)
         {
             var inputHandler = new UserInputHandler();
             bool valid = inputHandler.Validate(input);
             Assert.True(valid);
         }
-    }
-
-    public class UserInputHandler
-    {
-        public string getInput()
+        [Theory]
+        [InlineData("qq")]
+        [InlineData("1,1,")]
+        [InlineData(",1,1")]
+        [InlineData("a1,2r")]
+        public void ValidateInorrectInput(string input)
         {
-            Console.Write("press q to quit or enter move x,y: ");
-            var input = Console.ReadLine();
-            return input;
+            var inputHandler = new UserInputHandler();
+            bool valid = inputHandler.Validate(input);
+            Assert.False(valid);
         }
-
-
-        public bool Validate(string input)
-        {
-            Regex format = new Regex("q");
-            return format.IsMatch(input);
-        }
+        
     }
 }

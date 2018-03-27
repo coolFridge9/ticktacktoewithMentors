@@ -20,6 +20,7 @@
         <e p="Player.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="TicTakToeApp.csproj" t="IncludeRecursive" />
+        <e p="UserInputHandler.cs" t="Include" />
         <e p="WinChecker.cs" t="Include" />
       </e>
       <e p="TicTakToeWIthKaren" t="IncludeRecursive">
