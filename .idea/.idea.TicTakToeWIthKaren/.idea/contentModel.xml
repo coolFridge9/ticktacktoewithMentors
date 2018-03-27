@@ -23,6 +23,8 @@
       </e>
       <e p="TicTakToeWIthKaren" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BoardViewerShould.cs" t="Include" />
+        <e p="GamePlayShould.cs" t="Include" />
         <e p="MoveListShould.cs" t="Include" />
         <e p="MoveShould.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -33,6 +35,7 @@
             </e>
           </e>
         </e>
+        <e p="PlayerShould.cs" t="Include" />
         <e p="TicTakToeWIthKaren.csproj" t="IncludeRecursive" />
         <e p="WinCheckerShould.cs" t="Include" />
       </e>

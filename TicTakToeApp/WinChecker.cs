@@ -100,12 +100,12 @@ namespace TicTakToeApp
 
         private static bool ContainsAllItems(List<Move> a, List<Move> b)
         {
-            var moves = convertToTupleList(a);
-            var winmoves = convertToTupleList(b);
+            var moves = ConvertToTupleList(a);
+            var winmoves = ConvertToTupleList(b);
             return !winmoves.Except(moves).Any();
         }
 
-        private static List<Tuple<int,int>> convertToTupleList(List<Move> moves)
+        private static List<Tuple<int,int>> ConvertToTupleList(List<Move> moves)
         {
             List<Tuple<int,int>> converted = new List<Tuple<int, int>>();
             foreach (var move in moves)
