@@ -8,8 +8,7 @@ namespace TicTakToeApp
 {
     public class WinChecker
     {
-        public static readonly int SizeOfBoard = 3;
-        public static readonly int NumberInARowToWin = SizeOfBoard;
+        public static readonly int NumberInARowToWin = 3;
         
         public bool CheckForWin(MoveList moveList) 
         {
