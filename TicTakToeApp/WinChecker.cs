@@ -83,10 +83,26 @@ namespace TicTakToeApp
 
         public bool CheckForDiagonalWinLeftDown( List<Move> moves)
         {
-            var win = new List<Move> {new Move(1, 1), new Move(2, 2), new Move(3, 3)};
-            return ContainsAllItems(moves, win);
+            foreach (var move in moves)
+            {
+                List<Move> corrospondingMoves = CalculateCorospondingMovesToWin(move);
+                if (ContainsAllItems(moves, corrospondingMoves))
+                    return true;
+            }
+
+            return false;
         }
-        
+
+        private List<Move> CalculateCorospondingMovesToWin(Move move)
+        {
+            List<Move> winners = new List<Move>();
+            
+            for (int i = 1; i < NumberInARowToWin; i++)
+                winners.Add(new Move(move.X+1,move.Y+1));
+         
+            return winners;
+        }
+
         private static bool ContainsAllItems(List<Move> a, List<Move> b)
         {
             var moves = convertToTupleList(a);

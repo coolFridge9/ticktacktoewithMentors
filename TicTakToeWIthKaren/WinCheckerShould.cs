@@ -177,10 +177,24 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,1));
             moveList.AddMove(new Move(3,3));
 
-            var count = 0;
-            var seperatedCoordinates = winChecker.MakeXValuesKeys(moveList);
             var diagonal3InARow = winChecker.CheckForDiagonalWinLeftDown(moveList.Moves);
             Assert.False(diagonal3InARow);
+
+        }
+        
+        [Fact]
+        public void IdentifyDiagonalStraightFromRightTop()
+        {
+            var moveList = new MoveList();
+            var winChecker = new WinChecker();
+            
+            moveList.AddMove(new Move(2,2));
+            moveList.AddMove(new Move(2,3));
+            moveList.AddMove(new Move(1,3));
+            moveList.AddMove(new Move(3,1));
+
+            var diagonal3InARow = winChecker.CheckForDiagonalWinLeftDown(moveList.Moves);
+            Assert.True(diagonal3InARow);
 
         }
     }
