@@ -5,15 +5,15 @@ namespace TicTakToeApp
 {
     public class UserInputHandler
     {
-        public string getInput()
+        public string GetInput()
         {
             Console.Write("press q to quit or enter move x,y: ");
             var input = Console.ReadLine();
-            return input;
+            var validInput = Validation(input);
+            return validInput;
         }
 
-
-        public bool Validate(string input)
+        public bool IsValid(string input)
         {
             Regex format = new Regex("^q$|^-?[0-9],-?[0-9]$");
             return format.IsMatch(input);
@@ -22,6 +22,15 @@ namespace TicTakToeApp
         public bool DidQuit(string input)
         {
             return input == "q";
+        }
+
+        private string Validation(string input)
+        {
+            if (IsValid(input))
+                return input;
+            Console.WriteLine("invalid");
+            input = GetInput();
+            return input;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace TicTakToeWIthKaren
         public void ValidateCorrectInput(string input)
         {
             var inputHandler = new UserInputHandler();
-            bool valid = inputHandler.Validate(input);
+            bool valid = inputHandler.IsValid(input);
             Assert.True(valid);
         }
         [Theory]
@@ -25,7 +25,7 @@ namespace TicTakToeWIthKaren
         public void ValidateInorrectInput(string input)
         {
             var inputHandler = new UserInputHandler();
-            bool valid = inputHandler.Validate(input);
+            bool valid = inputHandler.IsValid(input);
             Assert.False(valid);
         }
 

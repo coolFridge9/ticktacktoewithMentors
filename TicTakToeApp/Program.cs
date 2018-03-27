@@ -7,6 +7,8 @@ namespace TicTakToeApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            var input = new UserInputHandler();
+            var a = input.GetInput();
         }
     }
 }
