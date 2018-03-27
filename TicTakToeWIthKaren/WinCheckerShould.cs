@@ -162,5 +162,20 @@ namespace TicTakToeWIthKaren
             Assert.True(diagonal3InARow);
 
         }
+
+        [Fact]
+        public void IndenifyThisRandomWin()
+        {
+            var moveList = new MoveList();
+            var winChecker = new WinChecker();
+            
+            moveList.AddMove(new Move(2,4));
+            moveList.AddMove(new Move(4,2));
+            moveList.AddMove(new Move(1,3));
+            moveList.AddMove(new Move(3,3));
+
+            bool diagonal3InARow = winChecker.CheckForDiagonalWin(moveList.Moves);
+            Assert.True(diagonal3InARow);
+        }
     }
 }

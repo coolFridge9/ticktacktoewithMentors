@@ -15,7 +15,8 @@ namespace TicTakToeApp
         {
             var xCoordinates = AddXCoordinatesIntoSortedList(moveList.Moves); 
             var yCoordinates = AddYCoordinatesIntoSortedList(moveList.Moves);
-            return ContainsStraightLine(xCoordinates) || ContainsStraightLine(yCoordinates);
+            return ContainsStraightLine(xCoordinates) || ContainsStraightLine(yCoordinates) || 
+                   CheckForDiagonalWin(moveList.Moves);
         }
 
         public List<int> AddXCoordinatesIntoSortedList(List<Move> moveList)
