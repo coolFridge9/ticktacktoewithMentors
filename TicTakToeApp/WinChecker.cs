@@ -6,10 +6,11 @@ namespace TicTakToeApp
     {
         public static readonly int SizeOfBoard = 3;
         
-        public bool CheckForWin(MoveList moveList) //rename vertical something
+        public bool CheckForWin(MoveList moveList) 
         {
-            var xCoordinates = AddXCoordinatesIntoSortedList(moveList.Moves); //x coordinates is for vertical
-            return ContainsStraightLine(xCoordinates);
+            var xCoordinates = AddXCoordinatesIntoSortedList(moveList.Moves); 
+            var yCoordinates = AddYCoordinatesIntoSortedList(moveList.Moves);
+            return ContainsStraightLine(xCoordinates) || ContainsStraightLine(yCoordinates);
         }
 
         public List<int> AddXCoordinatesIntoSortedList(List<Move> moveList)
@@ -18,6 +19,17 @@ namespace TicTakToeApp
 
             foreach (var move in moveList)
                 xCoordinates.Add(move.X);
+    
+            xCoordinates.Sort();
+            return xCoordinates;
+        }
+        
+        public List<int> AddYCoordinatesIntoSortedList(List<Move> moveList)
+        {
+            var xCoordinates = new List<int>();
+
+            foreach (var move in moveList)
+                xCoordinates.Add(move.Y);
     
             xCoordinates.Sort();
             return xCoordinates;

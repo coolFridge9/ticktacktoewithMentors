@@ -37,23 +37,20 @@ namespace TicTakToeWIthKaren
         [Fact]
         public void CheckIfListContains3StraightInARow()
         {
-            if (WinChecker.SizeOfBoard == 3)
-            {
-                var moveList = new MoveList();
-                var winChecker = new WinChecker();
             
-                moveList.AddMove(new Move(1,2));
-                moveList.AddMove(new Move(2,2));
-                moveList.AddMove(new Move(1,1));
-                moveList.AddMove(new Move(1,3));
+            var moveList = new MoveList();
+            var winChecker = new WinChecker();
+        
+            moveList.AddMove(new Move(1,2));
+            moveList.AddMove(new Move(2,2));
+            moveList.AddMove(new Move(1,1));
+            moveList.AddMove(new Move(1,3));
 
-                var listOfX = winChecker.AddXCoordinatesIntoSortedList(moveList.Moves);
-                var result = winChecker.ContainsStraightLine(listOfX);
-                
-                Assert.True(result);
-
-            }
+            var listOfX = winChecker.AddXCoordinatesIntoSortedList(moveList.Moves);
+            var result = winChecker.ContainsStraightLine(listOfX);
             
+            Assert.True(result);
+  
         }
         
         [Fact]
@@ -69,6 +66,51 @@ namespace TicTakToeWIthKaren
 
             var didUserWin = winChecker.CheckForWin(moveList);
             Assert.True(didUserWin);
+        }
+
+        [Fact]
+        public void IndentifyAHorizontalWin()
+        {
+            var moveList = new MoveList();
+            var winChecker = new WinChecker();
+            
+            moveList.AddMove(new Move(2,2));
+            moveList.AddMove(new Move(2,3));
+            moveList.AddMove(new Move(1,3));
+            moveList.AddMove(new Move(3,3));
+
+            var didUserWin = winChecker.CheckForWin(moveList);
+            Assert.True(didUserWin);
+        }
+
+        [Fact]
+        public void IndentifyAUserDidntWin()
+        {
+            var moveList = new MoveList();
+            var winChecker = new WinChecker();
+            
+            moveList.AddMove(new Move(2,2));
+            moveList.AddMove(new Move(2,3));
+            moveList.AddMove(new Move(1,3));
+            moveList.AddMove(new Move(3,2));
+
+            var didUserWin = winChecker.CheckForWin(moveList);
+            Assert.False(didUserWin);
+        }
+
+        [Fact]
+        public void IdentifyADiagonalWinFromLeftTop()
+        {
+            var moveList = new MoveList();
+            var winChecker = new WinChecker();
+            
+            moveList.AddMove(new Move(2,2));
+            moveList.AddMove(new Move(2,3));
+            moveList.AddMove(new Move(1,1));
+            moveList.AddMove(new Move(3,3));
+
+            var didUserWin = winChecker.CheckForWin(moveList);
+            Assert.True(didUserWin); 
         }
     }
 }

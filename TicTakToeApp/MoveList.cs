@@ -1,4 +1,4 @@
-using System.Collections.Generic;ß
+using System.Collections.Generic;
 
 namespace TicTakToeApp
 {
