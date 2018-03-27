@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace TicTakToeApp
 {
     public class WinChecker
     {
         public static readonly int SizeOfBoard = 3;
+        public static readonly int NumberInARowToWin = SizeOfBoard;
         
         public bool CheckForWin(MoveList moveList) 
         {
@@ -42,7 +44,7 @@ namespace TicTakToeApp
             {
                 count = GetCount(count, listOfCoordinates[i], listOfCoordinates[i - 1]);
 
-                if (count == SizeOfBoard-1)
+                if (count == NumberInARowToWin-1)
                     return true;
             }
 
@@ -57,6 +59,45 @@ namespace TicTakToeApp
             {
                 return 0;
             }
+        }
+
+        public Dictionary<int, List<Move>> MakeXValuesKeys(MoveList moveList)
+        {
+            var seperated = new Dictionary<int, List<Move>>();
+            foreach (var move in moveList.Moves)
+            {
+                if(seperated.ContainsKey(move.X))
+                    seperated[move.X].Add(move);
+                else
+                {
+                    seperated[move.X]= new List<Move>();
+                }
+            }
+
+            return seperated;
+        }
+
+
+        public bool CheckForDiagonalWin(int count, Dictionary<int, List<Move>> moveListDictionary, 
+            List<Move> moves, Move currentMove)
+        {
+            if (count == NumberInARowToWin - 1)
+                return true;
+            foreach (var move in moves)
+            {
+                if (moveListDictionary.ContainsKey(move.Y))
+                {
+                    foreach (var nextMove in moveListDictionary[move.Y])
+                    {
+                        if (nextMove.Y == move.Y + 1)
+                        {
+                            
+                        }
+                    }
+                }
+            }
+            
+            throw new System.NotImplementedException();
         }
     }
 }
