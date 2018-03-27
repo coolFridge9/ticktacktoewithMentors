@@ -64,41 +64,36 @@ namespace TicTakToeApp
             }
         }
 
-        public Dictionary<int, List<Move>> MakeXValuesKeys(MoveList moveList)
-        {
-            var seperated = new Dictionary<int, List<Move>>();
-            foreach (var move in moveList.Moves)
-            {
-                if(seperated.ContainsKey(move.X))
-                    seperated[move.X].Add(move);
-                else
-                {
-                    seperated[move.X]= new List<Move>();
-                }
-            }
-
-            return seperated;
-        }
-
-
-        public bool CheckForDiagonalWinLeftDown( List<Move> moves)
+        public bool CheckForDiagonalWin( List<Move> moves)
         {
             foreach (var move in moves)
             {
-                List<Move> corrospondingMoves = CalculateCorospondingMovesToWin(move);
-                if (ContainsAllItems(moves, corrospondingMoves))
+                List<Move> corrospondingMovesForLeftWin = CalculateCorospondingMovesFromLeft(move);
+                List<Move> corrospondingMovesForRightWin = CalculateCorospondingMovesFromRight(move);
+                if (ContainsAllItems(moves, corrospondingMovesForLeftWin) || 
+                    ContainsAllItems(moves,corrospondingMovesForRightWin))                
                     return true;
             }
 
             return false;
         }
 
-        private List<Move> CalculateCorospondingMovesToWin(Move move)
+        private List<Move> CalculateCorospondingMovesFromRight(Move move)
+        {
+            List<Move> winners = new List<Move>();
+                        
+            for (int i = 1; i < NumberInARowToWin; i++)
+                winners.Add(new Move(move.X+i,move.Y-i));
+         
+            return winners;
+        }
+
+        private List<Move> CalculateCorospondingMovesFromLeft(Move move)
         {
             List<Move> winners = new List<Move>();
             
             for (int i = 1; i < NumberInARowToWin; i++)
-                winners.Add(new Move(move.X+1,move.Y+1));
+                winners.Add(new Move(move.X+i,move.Y+i));
          
             return winners;
         }
@@ -120,5 +115,7 @@ namespace TicTakToeApp
 
             return converted;
         }
+
+       
     }
 }

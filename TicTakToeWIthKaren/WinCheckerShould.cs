@@ -101,41 +101,6 @@ namespace TicTakToeWIthKaren
         }
 
         [Fact]
-        public void seperatesInToDictionaryByXValue()
-        {
-            var moveList = new MoveList();
-            var winChecker = new WinChecker();
-            
-            moveList.AddMove(new Move(2,2));
-            moveList.AddMove(new Move(2,3));
-            moveList.AddMove(new Move(1,1));
-            moveList.AddMove(new Move(3,3));
-
-            var seperatedCoordinates = winChecker.MakeXValuesKeys(moveList);
-            var expectedDictionary = new Dictionary<int, List<Move>>
-            {
-                {1, new List<Move> {new Move(1, 1)}},
-                {2, new List<Move> {new Move(2,2),new Move(2,3)}},
-                {3, new List<Move> {new Move(3,3)}}
-            };
-            
-            //Assert.Equal(expectedDictionary,seperatedCoordinates);
-            Assert.True(CompareDictionaryKeys(expectedDictionary,seperatedCoordinates));
-            
-
-        }
-
-        private bool CompareDictionaryKeys(Dictionary<int, List<Move>> expected, Dictionary<int, List<Move>>result)
-        {
-            var list = result.Keys.ToList();
-            list.Sort();
-            var list2 = result.Keys.ToList();
-            list2.Sort();
-
-            return list.SequenceEqual(list2);
-        }
-
-        [Fact]
         public void IdentifyADiagonalWinFromLeftTop()
         {
             var moveList = new MoveList();
@@ -161,7 +126,7 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,1));
             moveList.AddMove(new Move(3,3));
 
-            var diagonal3InARow = winChecker.CheckForDiagonalWinLeftDown(moveList.Moves);
+            var diagonal3InARow = winChecker.CheckForDiagonalWin(moveList.Moves);
             Assert.True(diagonal3InARow);
 
         }
@@ -177,7 +142,7 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,1));
             moveList.AddMove(new Move(3,3));
 
-            var diagonal3InARow = winChecker.CheckForDiagonalWinLeftDown(moveList.Moves);
+            var diagonal3InARow = winChecker.CheckForDiagonalWin(moveList.Moves);
             Assert.False(diagonal3InARow);
 
         }
@@ -193,7 +158,7 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,3));
             moveList.AddMove(new Move(3,1));
 
-            var diagonal3InARow = winChecker.CheckForDiagonalWinLeftDown(moveList.Moves);
+            bool diagonal3InARow = winChecker.CheckForDiagonalWin(moveList.Moves);
             Assert.True(diagonal3InARow);
 
         }
