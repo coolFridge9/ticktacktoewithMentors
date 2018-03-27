@@ -120,17 +120,19 @@ namespace TicTakToeWIthKaren
             };
             
             //Assert.Equal(expectedDictionary,seperatedCoordinates);
-            Assert.True(CompareDictionarys(expectedDictionary,seperatedCoordinates));
+            Assert.True(CompareDictionaryKeys(expectedDictionary,seperatedCoordinates));
             
 
         }
 
-        private bool CompareDictionarys(Dictionary<int, List<Move>> expected, Dictionary<int, List<Move>>result)
+        private bool CompareDictionaryKeys(Dictionary<int, List<Move>> expected, Dictionary<int, List<Move>>result)
         {
-            var remainderDictionary = result.Where(entry => expected[entry.Key] != entry.Value)
-                .ToDictionary(entry => entry.Key, entry => entry.Value);
+            var list = result.Keys.ToList();
+            list.Sort();
+            var list2 = result.Keys.ToList();
+            list2.Sort();
 
-            return (remainderDictionary.Count == 0);
+            return list.SequenceEqual(list2);
         }
 
         [Fact]
@@ -159,10 +161,7 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,1));
             moveList.AddMove(new Move(3,3));
 
-            var count = 0;
-            var seperatedCoordinates = winChecker.MakeXValuesKeys(moveList);
-            var diagonal3InARow = winChecker.CheckForDiagonalWin(count, seperatedCoordinates,
-                moveList.Moves,moveList.Moves[0]);
+            var diagonal3InARow = winChecker.CheckForDiagonalWinLeftDown(moveList.Moves);
             Assert.True(diagonal3InARow);
 
         }
@@ -180,8 +179,7 @@ namespace TicTakToeWIthKaren
 
             var count = 0;
             var seperatedCoordinates = winChecker.MakeXValuesKeys(moveList);
-            var diagonal3InARow = winChecker.CheckForDiagonalWin(count, seperatedCoordinates,
-                moveList.Moves,moveList.Moves[0]);
+            var diagonal3InARow = winChecker.CheckForDiagonalWinLeftDown(moveList.Moves);
             Assert.False(diagonal3InARow);
 
         }

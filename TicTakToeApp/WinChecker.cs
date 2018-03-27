@@ -1,4 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 namespace TicTakToeApp
@@ -78,26 +81,28 @@ namespace TicTakToeApp
         }
 
 
-        public bool CheckForDiagonalWin(int count, Dictionary<int, List<Move>> moveListDictionary, 
-            List<Move> moves, Move currentMove)
+        public bool CheckForDiagonalWinLeftDown( List<Move> moves)
         {
-            if (count == NumberInARowToWin - 1)
-                return true;
+            var win = new List<Move> {new Move(1, 1), new Move(2, 2), new Move(3, 3)};
+            return ContainsAllItems(moves, win);
+        }
+        
+        private static bool ContainsAllItems(List<Move> a, List<Move> b)
+        {
+            var moves = convertToTupleList(a);
+            var winmoves = convertToTupleList(b);
+            return !winmoves.Except(moves).Any();
+        }
+
+        private static List<Tuple<int,int>> convertToTupleList(List<Move> moves)
+        {
+            List<Tuple<int,int>> converted = new List<Tuple<int, int>>();
             foreach (var move in moves)
             {
-                if (moveListDictionary.ContainsKey(move.Y))
-                {
-                    foreach (var nextMove in moveListDictionary[move.Y])
-                    {
-                        if (nextMove.Y == move.Y + 1)
-                        {
-                            
-                        }
-                    }
-                }
+                converted.Add(Tuple.Create(move.X,move.Y));
             }
-            
-            throw new System.NotImplementedException();
+
+            return converted;
         }
     }
 }
