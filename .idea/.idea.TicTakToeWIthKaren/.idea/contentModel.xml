@@ -24,9 +24,10 @@
         <e p="WinChecker.cs" t="Include" />
       </e>
       <e p="TicTakToeWIthKaren" t="IncludeRecursive">
+        <e p="AIShould.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="BoardViewerShould.cs" t="Include" />
-        <e p="GamePlayShould.cs" t="Include" />
+        <e p="GameEngineShould.cs" t="Include" />
         <e p="MoveListShould.cs" t="Include" />
         <e p="MoveShould.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
