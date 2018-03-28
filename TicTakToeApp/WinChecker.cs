@@ -12,56 +12,7 @@ namespace TicTakToeApp
         
         public bool CheckForWin(MoveList moveList) 
         {
-            var xCoordinates = AddXCoordinatesIntoSortedList(moveList.Moves); 
-            var yCoordinates = AddYCoordinatesIntoSortedList(moveList.Moves);
-            return ContainsStraightLine(xCoordinates) || ContainsStraightLine(yCoordinates) || 
-                   CheckForDiagonalWin(moveList.Moves);
-        }
-
-        public List<int> AddXCoordinatesIntoSortedList(List<Move> moveList)
-        {
-            var xCoordinates = new List<int>();
-
-            foreach (var move in moveList)
-                xCoordinates.Add(move.X);
-    
-            xCoordinates.Sort();
-            return xCoordinates;
-        }
-        
-        public List<int> AddYCoordinatesIntoSortedList(List<Move> moveList)
-        {
-            var xCoordinates = new List<int>();
-
-            foreach (var move in moveList)
-                xCoordinates.Add(move.Y);
-    
-            xCoordinates.Sort();
-            return xCoordinates;
-        }
-
-        public bool ContainsStraightLine(List<int> listOfCoordinates)
-        {
-            var count = 0;
-            for (int i = 1; i < listOfCoordinates.Count; i++)
-            {
-                count = GetCount(count, listOfCoordinates[i], listOfCoordinates[i - 1]);
-
-                if (count == NumberInARowToWin-1)
-                    return true;
-            }
-
-            return false;
-        }
-
-        public int GetCount(int count, int coordinate, int previousCoordinate)
-        {
-            if (coordinate == previousCoordinate)
-                return count + 1;
-            else
-            {
-                return 0;
-            }
+            return CheckForDiagonalWin(moveList.Moves) || CheckForStraightWin(moveList.Moves);
         }
 
         public bool CheckForDiagonalWin( List<Move> moves)
@@ -77,6 +28,41 @@ namespace TicTakToeApp
 
             return false;
         }
+        
+        public bool CheckForStraightWin( List<Move> moves)
+        {
+            foreach (var move in moves)
+            {
+                List<Move> corrospondingMovesForHorizontal = CalculateCorospondingHorizontal(move);
+                List<Move> corrospondingMovesForVertical = CalculateCorospondingVertical(move);
+                if (ContainsAllItems(moves, corrospondingMovesForHorizontal) || 
+                    ContainsAllItems(moves,corrospondingMovesForVertical))                
+                    return true;
+            }
+
+            return false;
+        }
+
+        private List<Move> CalculateCorospondingHorizontal(Move move)
+        {
+            List<Move> winners = new List<Move>();
+                                    
+            for (int i = 1; i < NumberInARowToWin; i++)
+                winners.Add(new Move(move.X+i,move.Y));
+         
+            return winners;
+        }
+        
+        private List<Move> CalculateCorospondingVertical(Move move)
+        {
+            List<Move> winners = new List<Move>();
+                                    
+            for (int i = 1; i < NumberInARowToWin; i++)
+                winners.Add(new Move(move.X,move.Y+i));
+         
+            return winners;
+        }
+
 
         private List<Move> CalculateCorospondingMovesFromRight(Move move)
         {
