@@ -45,7 +45,14 @@ namespace TicTakToeApp
 
         public void KillPlayer(char c)
         {
-            throw new System.NotImplementedException();
+            foreach (var player in Players)
+            {
+                if (player.Symbol == c)
+                {
+                    Players.Remove(player);
+                    break;
+                }
+            }
         }
     }
 }
