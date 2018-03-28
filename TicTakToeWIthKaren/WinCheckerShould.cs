@@ -81,7 +81,7 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,1));
             moveList.AddMove(new Move(3,3));
 
-            var diagonal3InARow = winChecker.CheckForDiagonalWin(moveList.Moves);
+            var diagonal3InARow = winChecker.CheckForWin(moveList);
             Assert.True(diagonal3InARow);
 
         }
@@ -97,7 +97,7 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,1));
             moveList.AddMove(new Move(3,3));
 
-            var diagonal3InARow = winChecker.CheckForDiagonalWin(moveList.Moves);
+            var diagonal3InARow = winChecker.CheckForWin(moveList);
             Assert.False(diagonal3InARow);
 
         }
@@ -113,7 +113,7 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,3));
             moveList.AddMove(new Move(3,1));
 
-            bool diagonal3InARow = winChecker.CheckForDiagonalWin(moveList.Moves);
+            bool diagonal3InARow = winChecker.CheckForWin(moveList);
             Assert.True(diagonal3InARow);
 
         }
@@ -129,7 +129,7 @@ namespace TicTakToeWIthKaren
             moveList.AddMove(new Move(1,3));
             moveList.AddMove(new Move(3,3));
 
-            bool diagonal3InARow = winChecker.CheckForDiagonalWin(moveList.Moves);
+            bool diagonal3InARow = winChecker.CheckForWin(moveList);
             Assert.True(diagonal3InARow);
         }
     }

@@ -3,7 +3,7 @@ namespace TicTakToeApp
     public class Player
     {
         public MoveList Moves= new MoveList();
-        public static char Symbol;
+        public char Symbol;
         private bool IsAI;
         
         

@@ -6,9 +6,11 @@ namespace TicTakToeApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            var input = new UserInputHandler();
-            var a = input.GetInput();
+            //maybe make a set up class for this stuff
+            
+            var game = new GameEngine();
+            game.CreatePlayer(new Player('X'));
+            game.RunGame();
         }
     }
 }

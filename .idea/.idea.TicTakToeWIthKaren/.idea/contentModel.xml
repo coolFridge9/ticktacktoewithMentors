@@ -8,6 +8,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="TicTakToeApp" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Board.cs" t="Include" />
         <e p="GameEngine.cs" t="Include" />
         <e p="Move.cs" t="Include" />
         <e p="MoveList.cs" t="Include" />
@@ -28,6 +29,7 @@
       <e p="TicTakToeWIthKaren" t="IncludeRecursive">
         <e p="AIShould.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BoardShould.cs" t="Include" />
         <e p="BoardViewerShould.cs" t="Include" />
         <e p="GameEngineShould.cs" t="Include" />
         <e p="MoveListShould.cs" t="Include" />
