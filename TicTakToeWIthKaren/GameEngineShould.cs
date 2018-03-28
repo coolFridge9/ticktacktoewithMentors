@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using TicTakToeApp;
 using Xunit;
@@ -19,30 +18,6 @@ namespace TicTakToeWIthKaren
         {
             var game = new GameEngine();
             game.RunGame();
-        }
-        
-        
-    }
-
-    public class GameEngine
-    {
-        private List<Player> Players = new List<Player>();
-       
-        public void CreatePlayer(Player player)
-        {
-            Players.Add(player);
-        }
-
-        public void RunGame()
-        {
-            foreach (var player in Players)
-            {
-                var moveString= player.GetMove();
-                if (moveString == "q")
-                    break;
-                player.AddMove();
-
-            }
         }
     }
 }
