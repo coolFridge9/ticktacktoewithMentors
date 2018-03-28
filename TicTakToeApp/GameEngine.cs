@@ -43,16 +43,17 @@ namespace TicTakToeApp
             }
         }
 
-        public void KillPlayer(char c)
+        public void KillPlayer(Player player)
         {
-            foreach (var player in Players)
+            /*foreach (var player in Players)
             {
                 if (player.Symbol == c)
                 {
                     Players.Remove(player);
                     break;
                 }
-            }
+            }*/
+            Players.Remove(player);
         }
     }
 }

@@ -26,8 +26,9 @@ namespace TicTakToeWIthKaren
         public void DeletePlayer()
         {
             var game = new GameEngine();
-            game.CreatePlayer(new Player('X'));
-            game.KillPlayer('X');
+            var player = new Player('X');
+            game.CreatePlayer(player);
+            game.KillPlayer(player);
             Assert.False(game.Players.Any());
         }
     }
