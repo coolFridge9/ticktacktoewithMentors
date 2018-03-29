@@ -5,6 +5,8 @@ namespace TicTakToeApp
     public class GameEngine
     {
         public readonly List<Player> Players = new List<Player>();
+        private readonly StringToMoveConverter converter = new StringToMoveConverter();
+        private Board board= new Board();
        
         public void CreatePlayer(Player player)
         {
@@ -13,46 +15,43 @@ namespace TicTakToeApp
 
         public void RunGame() 
         {
-            var converter = new StringToMoveConverter();
-            var endGame = false;
-            var board= new Board();
-            while (!endGame && Players.Count>0)
+            
+            var didAPlayerWin = false;
+            while (!didAPlayerWin && Players.Count>0)
             {
-                foreach (var player in Players) //while no player has won
+                didAPlayerWin = IteratePlayers();
+            }
+        }
+
+        private bool IteratePlayers()
+        {
+            foreach (var player in Players) 
+            {
+                var moveString = player.GetMove();
+
+                if (moveString == "q")
                 {
-                    var moveString = player.GetMove();
-
-                    if (moveString == "q")
-                    {
-                        endGame = true; //remove player instead
-                        //goodbye message
-                        break; 
-                    }
-
-                    player.AddMove(converter.ConvertToMove(moveString));
-
-                    if (player.DidWin())
-                    {
-                        endGame = true;
-                        //winclass message accepting player as parameter
-                        break;
-                    }
-
-                    //display board with playerlist as parameter   
+                    KillPlayer(player);
+                    return false;
                 }
+
+                var move = converter.ConvertToMove(moveString);
+                //need to check if location is taken
+                player.AddMove(move);
+                board.AddMove(move);
+
+                if (player.DidWin())
+                {
+                    //winclass message accepting player as parameter
+                    return true;
+                }
+
+                //display board with playerlist as parameter   
             }
         }
 
         public void KillPlayer(Player player)
         {
-            /*foreach (var player in Players)
-            {
-                if (player.Symbol == c)
-                {
-                    Players.Remove(player);
-                    break;
-                }
-            }*/
             Players.Remove(player);
         }
     }
