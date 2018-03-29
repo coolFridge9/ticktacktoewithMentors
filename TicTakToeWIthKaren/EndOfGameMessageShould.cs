@@ -14,8 +14,13 @@ namespace TicTakToeWIthKaren
             var player = new Player('X');
             message.WinMessage(player);
         }
-        
-        
+        [Fact]
+        public void AcceptAPlayerAndQuitMessage()
+        {
+            var message = new EndOfGameMessage();
+            var player = new Player('X');
+            message.QuitMessage(player);
+        }
     }
 
     public class EndOfGameMessage
@@ -24,6 +29,11 @@ namespace TicTakToeWIthKaren
         {
             var message = "player " + player.Symbol + " has won the game.";
             Console.WriteLine(message);
+        }
+
+        public void QuitMessage(Player player)
+        {
+            throw new NotImplementedException();
         }
     }
 }
