@@ -33,7 +33,8 @@ namespace TicTakToeWIthKaren
 
         public void QuitMessage(Player player)
         {
-            throw new NotImplementedException();
+            var message = "Good bye player " + player.Symbol + "! Hope to see you again soon.";
+            Console.WriteLine(message);
         }
     }
 }

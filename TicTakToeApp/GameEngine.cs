@@ -27,33 +27,29 @@ namespace TicTakToeApp
         {
             foreach (var player in Players)
             {
-                Move move = null;
-                var moveAccepted = false;
-                
-                while (!moveAccepted)
-                {
-                    var moveString = player.GetMove();
+                Move move = null;   
+                var moveString = player.GetMove(board);
 
-                    if (moveString == "q")
+                if (moveString == "q")
+                {
+                    KillPlayer(player); //add goodbye message
+                    return false;
+                }
+                else
+                {
+                    move = converter.ConvertToMove(moveString);
+
+                    player.AddMove(move);
+                    board.AddMove(move);
+
+                    if (player.DidWin())
                     {
-                        KillPlayer(player);
-                        return false;
+                        //winclass message accepting player as parameter
+                        return true;
                     }
 
-                    move = converter.ConvertToMove(moveString);
-                    moveAccepted = !board.IsSpaceTaken(move);
+                    //display board with playerlist as parameter 
                 }
-
-                player.AddMove(move);
-                board.AddMove(move);
-
-                if (player.DidWin())
-                {
-                    //winclass message accepting player as parameter
-                    return true;
-                }
-
-                //display board with playerlist as parameter 
             }
 
             return false;

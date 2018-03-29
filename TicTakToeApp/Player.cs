@@ -5,6 +5,8 @@ namespace TicTakToeApp
         public MoveList Moves= new MoveList();
         public char Symbol;
         private bool IsAI;
+        private UserInputHandler inputHandler = new UserInputHandler();
+        private  StringToMoveConverter converter = new StringToMoveConverter();
         
         
         public Player(char c,bool isAI= false)
@@ -25,9 +27,9 @@ namespace TicTakToeApp
         }
 
 
-        public string GetMove()
+        public string GetMove(Board board)
         {
-            var move = !IsAI ? GetMoveFromUser() : GetMoveFromAI();
+            var move = !IsAI ? GetMoveFromUser(board) : GetMoveFromAI();
 
             return move;
         }
@@ -37,12 +39,17 @@ namespace TicTakToeApp
             throw new System.NotImplementedException();
         }
 
-        private string GetMoveFromUser()
+        private string GetMoveFromUser(Board board)
         {
-            var inputHandler = new UserInputHandler();
-            var move = inputHandler.GetInput();
-            //needs validate space not taken
-            return move;
+            while (true)
+            {
+                var moveString = inputHandler.GetInput();
+                if (moveString == "q") return moveString;
+                
+                var move = converter.ConvertToMove(moveString);
+                if (!board.IsSpaceTaken(move)) return moveString;
+            }
+
         }
     }
 }
