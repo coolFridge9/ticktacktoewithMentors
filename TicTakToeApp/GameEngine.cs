@@ -19,24 +19,31 @@ namespace TicTakToeApp
             var didAPlayerWin = false;
             while (!didAPlayerWin && Players.Count>0)
             {
-                didAPlayerWin = IteratePlayers();
+                didAPlayerWin = IteratePlayerTurns();
             }
         }
 
-        private bool IteratePlayers()
+        private bool IteratePlayerTurns()
         {
-            foreach (var player in Players) 
+            foreach (var player in Players)
             {
-                var moveString = player.GetMove();
-
-                if (moveString == "q")
+                Move move = null;
+                var moveAccepted = false;
+                
+                while (!moveAccepted)
                 {
-                    KillPlayer(player);
-                    return false;
+                    var moveString = player.GetMove();
+
+                    if (moveString == "q")
+                    {
+                        KillPlayer(player);
+                        return false;
+                    }
+
+                    move = converter.ConvertToMove(moveString);
+                    moveAccepted = !board.IsSpaceTaken(move);
                 }
 
-                var move = converter.ConvertToMove(moveString);
-                //need to check if location is taken
                 player.AddMove(move);
                 board.AddMove(move);
 
@@ -46,8 +53,10 @@ namespace TicTakToeApp
                     return true;
                 }
 
-                //display board with playerlist as parameter   
+                //display board with playerlist as parameter 
             }
+
+            return false;
         }
 
         public void KillPlayer(Player player)
