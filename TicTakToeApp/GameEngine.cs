@@ -40,7 +40,7 @@ namespace TicTakToeApp
                     move = converter.ConvertToMove(moveString);
 
                     player.AddMove(move);
-                    board.AddMove(move);
+                    board.AddMove(move); //problem when player is deleted
 
                     if (player.DidWin())
                     {
