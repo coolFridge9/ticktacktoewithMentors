@@ -13,75 +13,75 @@ namespace TicTakToeWIthKaren
         [Fact]
         public void IdentifyAVerticalWin()
         {
-            var moveList = new MoveList();
+            var moves = new List<Move>();
             var winChecker = new WinChecker();
             
-            moveList.AddMove(new Move(1,2));
-            moveList.AddMove(new Move(2,2));
-            moveList.AddMove(new Move(1,1));
-            moveList.AddMove(new Move(1,3));
+            moves.Add(new Move(1,2));
+            moves.Add(new Move(2,2));
+            moves.Add(new Move(1,1));
+            moves.Add(new Move(1,3));
 
-            var didUserWin = winChecker.CheckForWin(moveList);
+            var didUserWin = winChecker.CheckForWin(moves);
             Assert.True(didUserWin);
         }
 
         [Fact]
         public void IndentifyAHorizontalWin()
         {
-            var moveList = new MoveList();
+            var moves = new List<Move>();
             var winChecker = new WinChecker();
             
-            moveList.AddMove(new Move(2,2));
-            moveList.AddMove(new Move(2,3));
-            moveList.AddMove(new Move(1,3));
-            moveList.AddMove(new Move(3,3));
+            moves.Add(new Move(2,2));
+            moves.Add(new Move(2,3));
+            moves.Add(new Move(1,3));
+            moves.Add(new Move(3,3));
 
-            var didUserWin = winChecker.CheckForWin(moveList);
+            var didUserWin = winChecker.CheckForWin(moves);
             Assert.True(didUserWin);
         }
 
         [Fact]
         public void IndentifyAUserDidntWin()
         {
-            var moveList = new MoveList();
+            var moves = new List<Move>();
             var winChecker = new WinChecker();
             
-            moveList.AddMove(new Move(2,2));
-            moveList.AddMove(new Move(2,3));
-            moveList.AddMove(new Move(1,3));
-            moveList.AddMove(new Move(3,2));
+            moves.Add(new Move(2,2));
+            moves.Add(new Move(2,3));
+            moves.Add(new Move(1,3));
+            moves.Add(new Move(3,2));
 
-            var didUserWin = winChecker.CheckForWin(moveList);
+            var didUserWin = winChecker.CheckForWin(moves);
             Assert.False(didUserWin);
         }
 
         [Fact]
         public void IdentifyADiagonalWinFromLeftTop()
         {
-            var moveList = new MoveList();
+            var moves = new List<Move>();
             var winChecker = new WinChecker();
             
-            moveList.AddMove(new Move(2,2));
-            moveList.AddMove(new Move(2,3));
-            moveList.AddMove(new Move(1,1));
-            moveList.AddMove(new Move(3,3));
+            moves.Add(new Move(2,2));
+            moves.Add(new Move(2,3));
+            moves.Add(new Move(1,1));
+            moves.Add(new Move(3,3));
 
-            var didUserWin = winChecker.CheckForWin(moveList);
+            var didUserWin = winChecker.CheckForWin(moves);
             Assert.True(didUserWin); 
         }
 
         [Fact]
         public void IdentifyDiagonalStraightFromLeftTop()
         {
-            var moveList = new MoveList();
+            var moves = new List<Move>();
             var winChecker = new WinChecker();
             
-            moveList.AddMove(new Move(2,2));
-            moveList.AddMove(new Move(2,3));
-            moveList.AddMove(new Move(1,1));
-            moveList.AddMove(new Move(3,3));
+            moves.Add(new Move(2,2));
+            moves.Add(new Move(2,3));
+            moves.Add(new Move(1,1));
+            moves.Add(new Move(3,3));
 
-            var diagonal3InARow = winChecker.CheckForWin(moveList);
+            var diagonal3InARow = winChecker.CheckForWin(moves);
             Assert.True(diagonal3InARow);
 
         }
@@ -89,15 +89,15 @@ namespace TicTakToeWIthKaren
         [Fact]
         public void IdentifyNotADiagonalWin()
         {
-            var moveList = new MoveList();
+            var moves = new List<Move>();
             var winChecker = new WinChecker();
             
-            moveList.AddMove(new Move(2,1));
-            moveList.AddMove(new Move(2,3));
-            moveList.AddMove(new Move(1,1));
-            moveList.AddMove(new Move(3,3));
+            moves.Add(new Move(2,1));
+            moves.Add(new Move(2,3));
+            moves.Add(new Move(1,1));
+            moves.Add(new Move(3,3));
 
-            var diagonal3InARow = winChecker.CheckForWin(moveList);
+            var diagonal3InARow = winChecker.CheckForWin(moves);
             Assert.False(diagonal3InARow);
 
         }
@@ -105,15 +105,15 @@ namespace TicTakToeWIthKaren
         [Fact]
         public void IdentifyDiagonalStraightFromRightTop()
         {
-            var moveList = new MoveList();
+            var moves = new List<Move>();
             var winChecker = new WinChecker();
             
-            moveList.AddMove(new Move(2,2));
-            moveList.AddMove(new Move(2,3));
-            moveList.AddMove(new Move(1,3));
-            moveList.AddMove(new Move(3,1));
+            moves.Add(new Move(2,2));
+            moves.Add(new Move(2,3));
+            moves.Add(new Move(1,3));
+            moves.Add(new Move(3,1));
 
-            bool diagonal3InARow = winChecker.CheckForWin(moveList);
+            bool diagonal3InARow = winChecker.CheckForWin(moves);
             Assert.True(diagonal3InARow);
 
         }
@@ -121,15 +121,15 @@ namespace TicTakToeWIthKaren
         [Fact]
         public void IndenifyThisRandomWin()
         {
-            var moveList = new MoveList();
+            var moves = new List<Move>();
             var winChecker = new WinChecker();
             
-            moveList.AddMove(new Move(2,4));
-            moveList.AddMove(new Move(4,2));
-            moveList.AddMove(new Move(1,3));
-            moveList.AddMove(new Move(3,3));
+            moves.Add(new Move(2,4));
+            moves.Add(new Move(4,2));
+            moves.Add(new Move(1,3));
+            moves.Add(new Move(3,3));
 
-            bool diagonal3InARow = winChecker.CheckForWin(moveList);
+            bool diagonal3InARow = winChecker.CheckForWin(moves);
             Assert.True(diagonal3InARow);
         }
     }

@@ -1,8 +1,11 @@
+using System;
+using System.Collections.Generic;
+
 namespace TicTakToeApp
 {
     public class Player 
     {
-        public MoveList Moves= new MoveList();
+        public List<Move> Moves= new List<Move>();
         public char Symbol;
         private bool IsAI;
         private UserInputHandler inputHandler = new UserInputHandler();
@@ -17,7 +20,7 @@ namespace TicTakToeApp
 
         public void AddMove(Move move)
         {
-            Moves.AddMove(move);
+            Moves.Add(move);
         }
 
         public bool DidWin()
@@ -29,7 +32,7 @@ namespace TicTakToeApp
 
         public string GetMove(Board board)
         {
-
+            throw new NotImplementedException();
         }
 
     }

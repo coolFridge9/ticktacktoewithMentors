@@ -1667,6 +1667,15 @@
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
       },
+      "Xunit.Microsoft.VisualStudio.TestTools.UnitTesting/1.0.0-beta-1011": {
+        "type": "package",
+        "compile": {
+          "lib/net46/Xunit.Microsoft.VisualStudio.TestTools.UnitTesting.dll": {}
+        },
+        "runtime": {
+          "lib/net46/Xunit.Microsoft.VisualStudio.TestTools.UnitTesting.dll": {}
+        }
+      },
       "xunit.runner.visualstudio/2.3.1": {
         "type": "package",
         "dependencies": {
@@ -5686,6 +5695,17 @@
         "xunit.extensibility.execution.nuspec"
       ]
     },
+    "Xunit.Microsoft.VisualStudio.TestTools.UnitTesting/1.0.0-beta-1011": {
+      "sha512": "VjLnlxcR/IOSfwVdiJvwYHCdI4PqkeONjUBqsOHHgYc36cIHjy+x8amz0bGVwtPo4LOD5aoo7RCX+iNzqR+/fg==",
+      "type": "package",
+      "path": "xunit.microsoft.visualstudio.testtools.unittesting/1.0.0-beta-1011",
+      "files": [
+        "lib/net46/Xunit.Microsoft.VisualStudio.TestTools.UnitTesting.dll",
+        "lib/netstandardapp1.5/Xunit.Microsoft.VisualStudio.TestTools.UnitTesting.dll",
+        "xunit.microsoft.visualstudio.testtools.unittesting.1.0.0-beta-1011.nupkg.sha512",
+        "xunit.microsoft.visualstudio.testtools.unittesting.nuspec"
+      ]
+    },
     "xunit.runner.visualstudio/2.3.1": {
       "sha512": "B+RtW4dyBquEyjSAFyV5RMifaOZOirDwlzcIq2DNVGo1gzJS8PAPu5S+2y1n6ZgEMWbpqJf9TkZ55+X6FLdy3A==",
       "type": "package",
@@ -5724,6 +5744,7 @@
       "Microsoft.NET.Test.Sdk >= 15.5.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "TicTakToeApp >= 1.0.0",
+      "Xunit.Microsoft.VisualStudio.TestTools.UnitTesting >= 1.0.0-beta-1011",
       "xunit >= 2.3.1",
       "xunit.runner.visualstudio >= 2.3.1"
     ]
@@ -5781,6 +5802,10 @@
             "version": "[2.0.0, )",
             "autoReferenced": true
           },
+          "Xunit.Microsoft.VisualStudio.TestTools.UnitTesting": {
+            "target": "Package",
+            "version": "[1.0.0-beta-1011, )"
+          },
           "xunit": {
             "target": "Package",
             "version": "[2.3.1, )"
@@ -5797,5 +5822,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Xunit.Microsoft.VisualStudio.TestTools.UnitTesting 1.0.0-beta-1011' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Xunit.Microsoft.VisualStudio.TestTools.UnitTesting",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

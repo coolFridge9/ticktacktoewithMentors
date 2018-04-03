@@ -11,7 +11,7 @@ namespace TicTakToeApp
         public static readonly int NumberInARowToWin = 3;
 
         
-        public bool CheckForWin(MoveList moveList)
+        public bool CheckForWin(List<Move> moves)
         {
 
             const int stepRight = 1;
@@ -19,17 +19,17 @@ namespace TicTakToeApp
             const int stepUp = -1;
             const int stepNowhere = 0;
             
-            foreach (var move in moveList.Moves)
+            foreach (var move in moves)
             {
                 var movesRequiredForHorizontalWin = CalculateWinningMoves(move, stepRight, stepNowhere);
                 var movesRequiredForVerticalWin = CalculateWinningMoves(move, stepNowhere, stepDown);
                 var movesRequiredForDiagonalLeftWin = CalculateWinningMoves(move, stepRight, stepUp);
                 var movesRequiredForDiagonalRightWin= CalculateWinningMoves(move, stepRight, stepDown);
 
-                if (ContainsAllItems(moveList.Moves, movesRequiredForHorizontalWin) || 
-                    ContainsAllItems(moveList.Moves, movesRequiredForVerticalWin) ||
-                    ContainsAllItems(moveList.Moves, movesRequiredForDiagonalLeftWin) ||
-                    ContainsAllItems(moveList.Moves, movesRequiredForDiagonalRightWin))                
+                if (ContainsAllItems(moves, movesRequiredForHorizontalWin) || 
+                    ContainsAllItems(moves, movesRequiredForVerticalWin) ||
+                    ContainsAllItems(moves, movesRequiredForDiagonalLeftWin) ||
+                    ContainsAllItems(moves, movesRequiredForDiagonalRightWin))                
                     return true;
             }
             

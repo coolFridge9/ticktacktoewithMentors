@@ -1,20 +1,36 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TicTakToeApp
 {
     public class Board
     {
-        private MoveList allMoves= new MoveList();
+        //private moves allMoves= new moves();
+        public List<Move> allMoves { get; private set; }
+
+        public Board()
+        {
+            allMoves = new List<Move>();
+        }
         
         public void AddMove(Move move)
         {
-            allMoves.AddMove(move);
+            allMoves.Add(move);
         }
 
         public bool IsSpaceTaken(Move move)
         {
             var moveInList = new List<Move> {move};
-            return WinChecker.ContainsAllItems(allMoves.Moves, moveInList);
+            return WinChecker.ContainsAllItems(allMoves, moveInList);
+        }
+
+        public void Reform(List<Player> players)
+        {
+            allMoves = new List<Move>();
+            foreach (var player in players)
+            {
+                allMoves = allMoves.Concat(player.Moves).ToList();
+            }
         }
     }
 }

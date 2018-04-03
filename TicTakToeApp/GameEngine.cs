@@ -27,20 +27,19 @@ namespace TicTakToeApp
         {
             foreach (var player in Players)
             {
-                Move move = null;   
                 var moveString = player.GetMove(board);
 
                 if (moveString == "q")
                 {
                     KillPlayer(player); //add goodbye message
-                    return false;
                 }
+
                 else
                 {
-                    move = converter.ConvertToMove(moveString);
+                    var move = converter.ConvertToMove(moveString);
 
                     player.AddMove(move);
-                    board.AddMove(move); //problem when player is deleted
+                    //board.AddMove(move); //problem when player is deleted
 
                     if (player.DidWin())
                     {

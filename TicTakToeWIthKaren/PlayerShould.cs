@@ -7,7 +7,7 @@ namespace TicTakToeWIthKaren
     public class PlayerShould
     {
         [Fact]
-        public void BeInitialisedWithMoveListAndSymbol()
+        public void BeInitialisedWithmovesAndSymbol()
         { 
            var player = new Player('x');   
         }
