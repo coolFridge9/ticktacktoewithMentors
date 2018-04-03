@@ -8,10 +8,11 @@ namespace TicTakToeApp
         public string GetInput()
         {
             Console.Write("press q to quit or enter move x,y: ");
-            var input = Console.ReadLine();
+            var input = Console.ReadLine(); //inject a stream reader
             var validInput = Validation(input);
             return validInput;
         }
+        
 
         public bool IsValid(string input)
         {

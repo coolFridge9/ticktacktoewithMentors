@@ -32,5 +32,10 @@ namespace TicTakToeApp
                 allMoves = allMoves.Concat(player.Moves).ToList();
             }
         }
+
+        public Move GetMostRecentMove()
+        {
+            return allMoves.Count ==0 ? new Move(0,0) : allMoves[allMoves.Count - 1];
+        }
     }
 }

@@ -35,9 +35,28 @@ namespace TicTakToeWIthKaren
         }
 
         [Fact]
+        public void RecreateBasedOnMultiplePlayersMoves()
+        {
+            var player = new Player('O',new HumanMover());
+            player.AddMove(new Move(1,1));
+            player.AddMove(new Move(2,3));
+            
+            var player2 = new Player('X',new HumanMover());
+            player2.AddMove(new Move(3,2));
+            
+            var board = new Board();
+            board.Reform(new List<Player> {player, player2});
+
+            var expected = new List<Move> {new Move(1, 1), new Move(2, 3), new Move(3,2)};
+            
+            Assert.True(ComparePlayerLists(expected,board.allMoves));
+            
+        }
+        
+        [Fact]
         public void RecreateBasedOnPlayersMoves()
         {
-            var player = new Player('O');
+            var player = new Player('O',new HumanMover());
             player.AddMove(new Move(1,1));
             player.AddMove(new Move(2,3));
             var board = new Board();
@@ -45,8 +64,38 @@ namespace TicTakToeWIthKaren
 
             var expected = new List<Move> {new Move(1, 1), new Move(2, 3)};
             
-            Assert.True(expected.SequenceEqual(board.allMoves));
+            Assert.True(ComparePlayerLists(expected,board.allMoves));
             
+        }
+
+        [Fact]
+        public void ReturnMostRecentMove()
+        {
+            var board = new Board();
+            board.AddMove(new Move(1, 1));
+            board.AddMove(new Move(1, 2));
+            Move result = board.GetMostRecentMove();
+            Assert.Equal(result.X,1);
+            Assert.Equal(result.Y,2);
+        }
+
+        [Fact]
+        public void GexMaxXValue()
+        {
+            
+        }
+
+        private bool ComparePlayerLists(List<Move> expected,List<Move> actual)
+        {
+            for (int i = 0; i < expected.Count; i++)
+            {
+                if (expected[i].X != actual[i].X)
+                    return false;
+                if (expected[i].Y != actual[i].Y)
+                    return false;
+            }
+
+            return true;
         }
         
     }

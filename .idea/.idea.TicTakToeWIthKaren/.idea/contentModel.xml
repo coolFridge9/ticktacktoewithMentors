@@ -7,9 +7,11 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="TicTakToeApp" t="IncludeRecursive">
+        <e p="AI.cs" t="Include" />
         <e p="AIMover.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Board.cs" t="Include" />
+        <e p="EndOfGameMessage.cs" t="Include" />
         <e p="GameEngine.cs" t="Include" />
         <e p="HumanMover.cs" t="Include" />
         <e p="Move.cs" t="Include" />
@@ -32,7 +34,6 @@
         <e p="AIShould.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="BoardShould.cs" t="Include" />
-        <e p="BoardViewerShould.cs" t="Include" />
         <e p="EndOfGameMessageShould.cs" t="Include" />
         <e p="GameEngineShould.cs" t="Include" />
         <e p="MoveShould.cs" t="Include" />
@@ -45,6 +46,7 @@
           </e>
         </e>
         <e p="PlayerShould.cs" t="Include" />
+        <e p="RendererShould.cs" t="Include" />
         <e p="StringToMoveConverterShould.cs" t="Include" />
         <e p="TicTakToeWIthKaren.csproj" t="IncludeRecursive" />
         <e p="UserInputHandlerShould.cs" t="Include" />

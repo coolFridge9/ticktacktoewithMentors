@@ -6,16 +6,17 @@ namespace TicTakToeApp
     public class Player 
     {
         public List<Move> Moves= new List<Move>();
+        
         public char Symbol;
-        private bool IsAI;
+        private readonly PlayerMove _mover;
         private UserInputHandler inputHandler = new UserInputHandler();
         private  StringToMoveConverter converter = new StringToMoveConverter();
         
         
-        public Player(char c,bool isAI= false)
+        public Player(char c, PlayerMove mover)
         {
             Symbol = c;
-            IsAI = isAI;
+            _mover = mover;
         }
 
         public void AddMove(Move move)
@@ -32,7 +33,7 @@ namespace TicTakToeApp
 
         public string GetMove(Board board)
         {
-            throw new NotImplementedException();
+            return _mover.GetMove(board);
         }
 
     }

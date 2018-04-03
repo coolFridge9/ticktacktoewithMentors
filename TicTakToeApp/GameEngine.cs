@@ -7,8 +7,9 @@ namespace TicTakToeApp
         public readonly List<Player> Players = new List<Player>();
         private readonly StringToMoveConverter converter = new StringToMoveConverter();
         private Board board= new Board();
+        private EndOfGameMessage message = new EndOfGameMessage();
        
-        public void CreatePlayer(Player player)
+        public void CreatePlayer(Player player) // TODO: adds not creates
         {
             Players.Add(player);
         }
@@ -27,11 +28,12 @@ namespace TicTakToeApp
         {
             foreach (var player in Players)
             {
-                var moveString = player.GetMove(board);
+                var moveString = player.GetMove(board); 
 
                 if (moveString == "q")
                 {
-                    KillPlayer(player); //add goodbye message
+                    KillPlayer(player);
+                    board.Reform(Players);
                 }
 
                 else
@@ -39,11 +41,11 @@ namespace TicTakToeApp
                     var move = converter.ConvertToMove(moveString);
 
                     player.AddMove(move);
-                    //board.AddMove(move); //problem when player is deleted
+                    board.AddMove(move); 
 
                     if (player.DidWin())
                     {
-                        //winclass message accepting player as parameter
+                        message.WinMessage(player);
                         return true;
                     }
 
@@ -57,6 +59,7 @@ namespace TicTakToeApp
         public void KillPlayer(Player player)
         {
             Players.Remove(player);
+            message.QuitMessage(player);
         }
     }
 }

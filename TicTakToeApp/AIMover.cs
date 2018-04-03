@@ -4,7 +4,8 @@ namespace TicTakToeApp
     {
         public string GetMove(Board board)
         {
-            throw new System.NotImplementedException();
+            var move = new AI();
+            return move.ChooseMove(board);
         }
     }
 }

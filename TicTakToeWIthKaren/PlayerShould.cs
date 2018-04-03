@@ -9,13 +9,13 @@ namespace TicTakToeWIthKaren
         [Fact]
         public void BeInitialisedWithmovesAndSymbol()
         { 
-           var player = new Player('x');   
+           var player = new Player('x',new HumanMover());   
         }
 
         [Fact]
         public void BeAbletoAddMove()
         {
-            var player = new Player('x');
+            var player = new Player('x',new HumanMover());
             Move move = new Move(3,3);
             player.AddMove(move);
 
@@ -24,7 +24,7 @@ namespace TicTakToeWIthKaren
         [Fact]
         public void KnowWhenWonGame()
         {
-            var player = new Player('x');
+            var player = new Player('x',new HumanMover());
             
             player.AddMove(new Move(3,3));
             player.AddMove(new Move(5,3));
@@ -38,7 +38,7 @@ namespace TicTakToeWIthKaren
         [Fact]
         public void KnowWhenDidntWinGame()
         {
-            var player = new Player('x');
+            var player = new Player('x',new HumanMover());
             
             player.AddMove(new Move(3,3));
             player.AddMove(new Move(5,3));
