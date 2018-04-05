@@ -28,7 +28,7 @@ namespace TicTakToeWIthKaren
             var game = new GameEngine();
             var player = new Player('X',new HumanMover());
             game.CreatePlayer(player);
-            game.KillPlayer(player);
+            game.RemovePlayer(player);
             Assert.False(game.Players.Any());
         }
     }

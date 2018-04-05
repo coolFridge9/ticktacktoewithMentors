@@ -24,7 +24,7 @@ namespace TicTakToeApp
             return WinChecker.ContainsAllItems(allMoves, moveInList);
         }
 
-        public void Reform(List<Player> players)
+        public void CleanUpBoard(List<Player> players)
         {
             allMoves = new List<Move>();
             foreach (var player in players)

@@ -18,7 +18,7 @@ namespace TicTakToeApp
         {
             
             var didAPlayerWin = false;
-            while (!didAPlayerWin && Players.Count>0)
+            while ((!didAPlayerWin) && Players.Count>0)
             {
                 didAPlayerWin = IteratePlayerTurns();
             }
@@ -32,8 +32,8 @@ namespace TicTakToeApp
 
                 if (moveString == "q")
                 {
-                    KillPlayer(player);
-                    board.Reform(Players);
+                    RemovePlayer(player);
+                    board.CleanUpBoard(Players);
                 }
 
                 else
@@ -56,10 +56,10 @@ namespace TicTakToeApp
             return false;
         }
 
-        public void KillPlayer(Player player)
+        public void RemovePlayer(Player player)
         {
-            Players.Remove(player);
             message.QuitMessage(player);
+            Players.Remove(player);   
         }
     }
 }

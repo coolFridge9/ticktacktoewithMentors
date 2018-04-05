@@ -45,7 +45,7 @@ namespace TicTakToeWIthKaren
             player2.AddMove(new Move(3,2));
             
             var board = new Board();
-            board.Reform(new List<Player> {player, player2});
+            board.CleanUpBoard(new List<Player> {player, player2});
 
             var expected = new List<Move> {new Move(1, 1), new Move(2, 3), new Move(3,2)};
             
@@ -60,7 +60,7 @@ namespace TicTakToeWIthKaren
             player.AddMove(new Move(1,1));
             player.AddMove(new Move(2,3));
             var board = new Board();
-            board.Reform(new List<Player> {player});
+            board.CleanUpBoard(new List<Player> {player});
 
             var expected = new List<Move> {new Move(1, 1), new Move(2, 3)};
             
@@ -79,11 +79,7 @@ namespace TicTakToeWIthKaren
             Assert.Equal(result.Y,2);
         }
 
-        [Fact]
-        public void GexMaxXValue()
-        {
-            
-        }
+        
 
         private bool ComparePlayerLists(List<Move> expected,List<Move> actual)
         {
