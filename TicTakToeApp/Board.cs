@@ -6,7 +6,6 @@ namespace TicTakToeApp
 {
     public class Board
     {
-        //private moves allMoves= new moves();
         public List<Move> allMoves { get; private set; }
 
         public Board()

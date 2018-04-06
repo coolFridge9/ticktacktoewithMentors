@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace TicTakToeApp
@@ -30,6 +31,7 @@ namespace TicTakToeApp
             var playersToRemove = new List<Player>();
             foreach (var player in Players)
             {
+                Console.WriteLine("player "+player.Symbol+"'s turn:");
                 var moveString = player.GetMove(board); 
 
                 if (moveString == "q")
@@ -71,11 +73,5 @@ namespace TicTakToeApp
             }
         }
 
-        /*    public void RemovePlayer(Player player)
-        {
-            message.QuitMessage(player);
-            
-            //Players.Remove(player);   
-        }*/
     }
 }
