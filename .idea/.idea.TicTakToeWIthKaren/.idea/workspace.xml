@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dd34735-ad95-4bc9-9801-61e7e37985b4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/TicTakToeApp/Board.cs" afterPath="$PROJECT_DIR$/TicTakToeApp/Board.cs" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeApp/GameEngine.cs" afterPath="$PROJECT_DIR$/TicTakToeApp/GameEngine.cs" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.dll" afterPath="$PROJECT_DIR$/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.dll" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.pdb" afterPath="$PROJECT_DIR$/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.pdb" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.dll" afterPath="$PROJECT_DIR$/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.dll" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.pdb" afterPath="$PROJECT_DIR$/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.pdb" />
+      <change beforePath="$PROJECT_DIR$/TicTakToeApp/EndOfGameMessage.cs" afterPath="$PROJECT_DIR$/TicTakToeApp/EndOfGameMessage.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -123,22 +118,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HumanMover.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicTakToeApp/HumanMover.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="67" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
-              <folding>
-                <marker date="1522981770208" expanded="true" signature="37:786" ph="{...}" />
-                <marker date="1522981770208" expanded="true" signature="80:784" ph="{...}" />
-                <marker date="1522981770208" expanded="true" signature="291:778" ph="{...}" />
-                <marker date="1522981770208" expanded="true" signature="326:768" ph="{...}" />
-                <marker date="1522981770208" expanded="true" signature="650:754" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Move.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTakToeApp/Move.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -181,7 +160,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EndOfGameMessage.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TicTakToeApp/EndOfGameMessage.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="95" lean-forward="true" selection-start-line="15" selection-start-column="95" selection-end-line="15" selection-end-column="95" />
+              <folding>
+                <marker date="1523009019378" expanded="true" signature="37:534" ph="{...}" />
+                <marker date="1523009019378" expanded="true" signature="73:532" ph="{...}" />
+                <marker date="1523009019378" expanded="true" signature="125:261" ph="{...}" />
+                <marker date="1523009019378" expanded="true" signature="309:526" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTakToeApp/Board.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -275,6 +269,7 @@
         <option value="$PROJECT_DIR$/TicTakToeApp/Renderer.cs" />
         <option value="$PROJECT_DIR$/TicTakToeApp/GameEngine.cs" />
         <option value="$PROJECT_DIR$/TicTakToeApp/Board.cs" />
+        <option value="$PROJECT_DIR$/TicTakToeApp/EndOfGameMessage.cs" />
       </list>
     </option>
   </component>
@@ -389,12 +384,12 @@
       <workItem from="1522815865484" duration="1588000" />
       <workItem from="1522873050970" duration="15472000" />
       <workItem from="1522958901277" duration="10648000" />
-      <workItem from="1522999485784" duration="8057000" />
+      <workItem from="1522999485784" duration="8323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137328000" />
+    <option name="totallyTimeSpent" value="137594000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -407,12 +402,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15255658" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42905405" sideWeight="0.7203125" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.327" sideWeight="0.5800503" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.327" sideWeight="0.5800503" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291262" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -657,18 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTakToeApp/EndOfGameMessage.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1522716753724" expanded="true" signature="73:471" ph="{...}" />
-            <marker date="1522716753724" expanded="true" signature="125:261" ph="{...}" />
-            <marker date="1522716753724" expanded="true" signature="309:465" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTakToeApp/AI.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -753,18 +737,6 @@
             <marker date="1523007494243" expanded="true" signature="322:475" ph="{...}" />
             <marker date="1523007494243" expanded="true" signature="537:873" ph="{...}" />
             <marker date="1523007494243" expanded="true" signature="931:1268" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicTakToeApp/AIMover.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding>
-            <marker date="1523008031335" expanded="true" signature="37:281" ph="{...}" />
-            <marker date="1523008031335" expanded="true" signature="77:279" ph="{...}" />
-            <marker date="1523008031335" expanded="true" signature="126:273" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -854,6 +826,31 @@
             <marker date="1523008656596" expanded="true" signature="431:573" ph="{...}" />
             <marker date="1523008656596" expanded="true" signature="622:730" ph="{...}" />
             <marker date="1523008656596" expanded="true" signature="771:877" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTakToeApp/AIMover.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding>
+            <marker date="1523008031335" expanded="true" signature="37:281" ph="{...}" />
+            <marker date="1523008031335" expanded="true" signature="77:279" ph="{...}" />
+            <marker date="1523008031335" expanded="true" signature="126:273" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTakToeApp/EndOfGameMessage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="95" lean-forward="true" selection-start-line="15" selection-start-column="95" selection-end-line="15" selection-end-column="95" />
+          <folding>
+            <marker date="1523009019378" expanded="true" signature="37:534" ph="{...}" />
+            <marker date="1523009019378" expanded="true" signature="73:532" ph="{...}" />
+            <marker date="1523009019378" expanded="true" signature="125:261" ph="{...}" />
+            <marker date="1523009019378" expanded="true" signature="309:526" ph="{...}" />
           </folding>
         </state>
       </provider>

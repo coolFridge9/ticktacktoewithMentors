@@ -12,7 +12,8 @@ namespace TicTakToeApp
 
         public void QuitMessage(Player player)
         {
-            var message = "Good bye player " + player.Symbol + "! Hope to see you again soon.";
+            var message = player.Symbol+" quit the game\n" +
+                          "Good bye player " + player.Symbol + "! Hope to see you again soon.";
             Console.WriteLine(message);
         }
     }
