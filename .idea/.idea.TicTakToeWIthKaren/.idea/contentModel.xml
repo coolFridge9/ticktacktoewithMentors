@@ -25,6 +25,7 @@
         <e p="Player.cs" t="Include" />
         <e p="PlayerMove.cs" t="Include" />
         <e p="Program.cs" t="Include" />
+        <e p="Renderer.cs" t="Include" />
         <e p="StringToMoveConverter.cs" t="Include" />
         <e p="TicTakToeApp.csproj" t="IncludeRecursive" />
         <e p="UserInputHandler.cs" t="Include" />
