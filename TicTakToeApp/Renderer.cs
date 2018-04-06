@@ -6,30 +6,30 @@ namespace TicTakToeApp
 {
     public class Renderer
     {
-        private int LengthOfBoard = 3;
-        private int WidthOfBoard = 3;
+        private int BoardWidth = 3;
+        private int BoardLength = 3;
 
         public string RenderBoard(List<Player> players)
         {
             var boardString = "";
             UpdateBoardDimentions(players);
-            var board = new char[LengthOfBoard,WidthOfBoard];
+            var board = new char[BoardWidth,BoardLength];
             board = Initialise(board);
 
             foreach (var player in players)
             {
                 foreach (var move in player.Moves)
                 {
-                    if(move.X>0 && move.X<=LengthOfBoard && move.Y>0 && move.Y<= WidthOfBoard)
+                    if(move.X>0 && move.Y>0)
                         board[move.X - 1, move.Y - 1] = player.Symbol;   
                 }      
             }
 
-            for (var i = 0; i < LengthOfBoard; i++)
+            for (var i = 0; i < BoardWidth; i++)
             {
-                for (var j = 0; j < WidthOfBoard; j++)
+                for (var j = 0; j < BoardLength; j++)
                 {
-                    boardString += board[i, j];
+                    boardString += board[j, i];
                 }
                 boardString += '\n';
             }
@@ -40,17 +40,17 @@ namespace TicTakToeApp
 
         private void UpdateBoardDimentions(List<Player> players)
         {
-            var maxX = LengthOfBoard;
-            var maxY = WidthOfBoard;
+            var maxX = BoardWidth;
+            var maxY = BoardLength;
             foreach (var player in players)
             {
                 if (player.Moves.Any())
                 {
                     var latestMove = player.Moves[player.Moves.Count-1];
-                    if (latestMove.X > LengthOfBoard)
-                        LengthOfBoard = latestMove.X;
-                    if (latestMove.Y> WidthOfBoard)
-                        WidthOfBoard = latestMove.Y;
+                    if (latestMove.X > BoardLength)
+                        BoardLength = latestMove.X;
+                    if (latestMove.Y> BoardWidth)
+                        BoardWidth = latestMove.Y;
                 }
             }
         }
@@ -62,9 +62,9 @@ namespace TicTakToeApp
 
         private char[,] Initialise(char[,] board)
         {
-            for (var i = 0; i < LengthOfBoard; i++)
+            for (var i = 0; i < BoardWidth; i++)
             {
-                for (var k = 0; k < WidthOfBoard; k++)
+                for (var k = 0; k < BoardLength; k++)
                 {
                     board[i, k] = '.';
                 }
