@@ -8,6 +8,7 @@ namespace TicTakToeApp
         private readonly StringToMoveConverter converter = new StringToMoveConverter();
         private Board board= new Board();
         private EndOfGameMessage message = new EndOfGameMessage();
+        private Renderer renderer = new Renderer();
        
         public void CreatePlayer(Player player) // TODO: adds not creates
         {
@@ -49,7 +50,7 @@ namespace TicTakToeApp
                         return true;
                     }
 
-                    //display board with playerlist as parameter 
+                    renderer.DisplayBoard(Players);
                 }
             }
 

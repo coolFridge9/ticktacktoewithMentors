@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace TicTakToeApp
@@ -29,6 +30,11 @@ namespace TicTakToeApp
             
 
             return boardString;
+        }
+
+        public void DisplayBoard(List<Player> players)
+        {
+            Console.WriteLine(RenderBoard(players));
         }
 
         private static char[,] Initialise(char[,] board)

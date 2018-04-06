@@ -1,3 +1,5 @@
+using System;
+
 namespace TicTakToeApp
 {
     public class HumanMover : PlayerMove
@@ -11,10 +13,16 @@ namespace TicTakToeApp
             while (true)
             {
                 var moveString = inputHandler.GetInput();
-                if (moveString == "q") return moveString;
+                if (moveString == "q") 
+                    return moveString;
 
                 var move = converter.ConvertToMove(moveString);
-                if (!board.IsSpaceTaken(move)) return moveString;
+                if (!board.IsSpaceTaken(move)) 
+                    return moveString;
+                else
+                {
+                    Console.WriteLine("This space is taken lol\n");
+                }
             }
         }
     }
