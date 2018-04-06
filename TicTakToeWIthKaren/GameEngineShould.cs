@@ -21,15 +21,5 @@ namespace TicTakToeWIthKaren
             var game = new GameEngine();
             game.RunGame();
         }
-
-        [Fact]
-        public void DeletePlayer()
-        {
-            var game = new GameEngine();
-            var player = new Player('X',new HumanMover());
-            game.AddNewPlayer(player);
-            game.RemovePlayer(player);
-            Assert.False(game.Players.Any());
-        }
     }
 }

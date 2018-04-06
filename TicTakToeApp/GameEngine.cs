@@ -34,6 +34,7 @@ namespace TicTakToeApp
 
                 if (moveString == "q")
                 {
+                    board.RemovePlayer(player);
                     playersToRemove.Add(player);
                     message.QuitMessage(player);
                     player.Symbol = '.';
