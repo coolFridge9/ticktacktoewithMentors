@@ -3,12 +3,12 @@ using System.Xml.Schema;
 
 namespace TicTakToeApp
 {
-    public class AI
+    public class AI //needs a fix
     {
         public string ChooseMove(Board board)
         {
             var move = board.GetMostRecentMove();
-            while (board.IsSpaceTaken(move)&& move.X>0 && move.Y>0)
+            while (board.IsSpaceTaken(move)|| move.X<=0 || move.Y<=0)
             {
                 move = GetRandomMove(move);
             }

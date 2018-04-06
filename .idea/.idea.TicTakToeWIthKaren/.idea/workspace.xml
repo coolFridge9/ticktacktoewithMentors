@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dd34735-ad95-4bc9-9801-61e7e37985b4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TicTakToeWIthKaren/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.TicTakToeWIthKaren/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/TicTakToeApp/AI.cs" afterPath="$PROJECT_DIR$/TicTakToeApp/AI.cs" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeApp/UserInputHandler.cs" afterPath="$PROJECT_DIR$/TicTakToeApp/UserInputHandler.cs" />
       <change beforePath="$PROJECT_DIR$/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.dll" afterPath="$PROJECT_DIR$/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.dll" />
       <change beforePath="$PROJECT_DIR$/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.pdb" afterPath="$PROJECT_DIR$/TicTakToeApp/bin/Debug/netcoreapp2.0/TicTakToeApp.pdb" />
       <change beforePath="$PROJECT_DIR$/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.dll" afterPath="$PROJECT_DIR$/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.dll" />
       <change beforePath="$PROJECT_DIR$/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.pdb" afterPath="$PROJECT_DIR$/TicTakToeApp/obj/Debug/netcoreapp2.0/TicTakToeApp.pdb" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeWIthKaren/BoardShould.cs" afterPath="$PROJECT_DIR$/TicTakToeWIthKaren/BoardShould.cs" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeWIthKaren/UserInputHandlerShould.cs" afterPath="$PROJECT_DIR$/TicTakToeWIthKaren/UserInputHandlerShould.cs" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeApp.dll" afterPath="$PROJECT_DIR$/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeApp.dll" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeApp.pdb" afterPath="$PROJECT_DIR$/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeApp.pdb" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.dll" afterPath="$PROJECT_DIR$/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.dll" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.pdb" afterPath="$PROJECT_DIR$/TicTakToeWIthKaren/bin/Debug/netcoreapp2.0/TicTakToeWIthKaren.pdb" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.dll" afterPath="$PROJECT_DIR$/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.dll" />
-      <change beforePath="$PROJECT_DIR$/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.pdb" afterPath="$PROJECT_DIR$/TicTakToeWIthKaren/obj/Debug/netcoreapp2.0/TicTakToeWIthKaren.pdb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -80,18 +70,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AI.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AI.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TicTakToeApp/AI.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="22" column="46" lean-forward="false" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+            <state relative-caret-position="210">
+              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding>
-                <marker date="1523011215493" expanded="false" signature="6:38" ph="..." />
-                <marker date="1523011215493" expanded="true" signature="62:656" ph="{...}" />
-                <marker date="1523011215493" expanded="true" signature="84:654" ph="{...}" />
-                <marker date="1523011215493" expanded="true" signature="136:388" ph="{...}" />
-                <marker date="1523011215493" expanded="true" signature="264:336" ph="{...}" />
-                <marker date="1523011215493" expanded="true" signature="435:648" ph="{...}" />
+                <marker date="1523011824485" expanded="false" signature="6:38" ph="..." />
+                <marker date="1523011824485" expanded="true" signature="62:672" ph="{...}" />
+                <marker date="1523011824485" expanded="true" signature="98:670" ph="{...}" />
+                <marker date="1523011824485" expanded="true" signature="150:404" ph="{...}" />
+                <marker date="1523011824485" expanded="true" signature="280:352" ph="{...}" />
+                <marker date="1523011824485" expanded="true" signature="451:664" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -144,10 +134,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInputHandlerShould.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserInputHandlerShould.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TicTakToeWIthKaren/UserInputHandlerShould.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="303">
               <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding>
                 <marker date="1523011508807" expanded="false" signature="6:32" ph="..." />
@@ -273,10 +263,10 @@
         <option value="$PROJECT_DIR$/TicTakToeApp/EndOfGameMessage.cs" />
         <option value="$PROJECT_DIR$/TicTakToeApp/Renderer.cs" />
         <option value="$PROJECT_DIR$/TicTakToeApp/Program.cs" />
-        <option value="$PROJECT_DIR$/TicTakToeApp/AI.cs" />
         <option value="$PROJECT_DIR$/TicTakToeApp/UserInputHandler.cs" />
         <option value="$PROJECT_DIR$/TicTakToeWIthKaren/BoardShould.cs" />
         <option value="$PROJECT_DIR$/TicTakToeWIthKaren/UserInputHandlerShould.cs" />
+        <option value="$PROJECT_DIR$/TicTakToeApp/AI.cs" />
       </list>
     </option>
   </component>
@@ -391,12 +381,12 @@
       <workItem from="1522815865484" duration="1588000" />
       <workItem from="1522873050970" duration="15472000" />
       <workItem from="1522958901277" duration="10648000" />
-      <workItem from="1522999485784" duration="10859000" />
+      <workItem from="1522999485784" duration="11264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140130000" />
+    <option name="totallyTimeSpent" value="140535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -778,21 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicTakToeApp/AI.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="46" lean-forward="false" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding>
-            <marker date="1523011215493" expanded="false" signature="6:38" ph="..." />
-            <marker date="1523011215493" expanded="true" signature="62:656" ph="{...}" />
-            <marker date="1523011215493" expanded="true" signature="84:654" ph="{...}" />
-            <marker date="1523011215493" expanded="true" signature="136:388" ph="{...}" />
-            <marker date="1523011215493" expanded="true" signature="264:336" ph="{...}" />
-            <marker date="1523011215493" expanded="true" signature="435:648" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TicTakToeApp/Renderer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -865,7 +840,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TicTakToeWIthKaren/UserInputHandlerShould.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="303">
           <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
             <marker date="1523011508807" expanded="false" signature="6:32" ph="..." />
@@ -874,6 +849,21 @@
             <marker date="1523011508807" expanded="true" signature="301:462" ph="{...}" />
             <marker date="1523011508807" expanded="true" signature="708:870" ph="{...}" />
             <marker date="1523011508807" expanded="true" signature="924:1081" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicTakToeApp/AI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <marker date="1523011824485" expanded="false" signature="6:38" ph="..." />
+            <marker date="1523011824485" expanded="true" signature="62:672" ph="{...}" />
+            <marker date="1523011824485" expanded="true" signature="98:670" ph="{...}" />
+            <marker date="1523011824485" expanded="true" signature="150:404" ph="{...}" />
+            <marker date="1523011824485" expanded="true" signature="280:352" ph="{...}" />
+            <marker date="1523011824485" expanded="true" signature="451:664" ph="{...}" />
           </folding>
         </state>
       </provider>
