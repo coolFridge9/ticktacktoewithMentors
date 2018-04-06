@@ -9,8 +9,9 @@ namespace TicTakToeApp
             //maybe make a set up class for this stuff
             
             var game = new GameEngine();
-            game.CreatePlayer(new Player('X',new HumanMover()));
-            game.CreatePlayer(new Player('O',new HumanMover()));
+            game.AddNewPlayer(new Player('X',new HumanMover()));
+            game.AddNewPlayer(new Player('O',new HumanMover()));
+            game.AddNewPlayer(new Player('A',new AIMover()));
             game.RunGame();
         }
     }

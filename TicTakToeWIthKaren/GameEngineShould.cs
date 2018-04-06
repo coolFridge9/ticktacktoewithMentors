@@ -11,7 +11,7 @@ namespace TicTakToeWIthKaren
         public void CreateUserPlayers()
         {
             var game = new GameEngine();
-            game.CreatePlayer(new Player('X',new HumanMover()));
+            game.AddNewPlayer(new Player('X',new HumanMover()));
             Assert.Equal(game.Players[0].Symbol,'X');
         }
 
@@ -27,7 +27,7 @@ namespace TicTakToeWIthKaren
         {
             var game = new GameEngine();
             var player = new Player('X',new HumanMover());
-            game.CreatePlayer(player);
+            game.AddNewPlayer(player);
             game.RemovePlayer(player);
             Assert.False(game.Players.Any());
         }

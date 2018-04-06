@@ -10,7 +10,7 @@ namespace TicTakToeApp
         private EndOfGameMessage message = new EndOfGameMessage();
         private Renderer renderer = new Renderer();
        
-        public void CreatePlayer(Player player) // TODO: adds not creates
+        public void AddNewPlayer(Player player) 
         {
             Players.Add(player);
         }
@@ -27,14 +27,17 @@ namespace TicTakToeApp
 
         private bool IteratePlayerTurns()
         {
+            var playersToRemove = new List<Player>();
             foreach (var player in Players)
             {
                 var moveString = player.GetMove(board); 
 
                 if (moveString == "q")
                 {
-                    RemovePlayer(player);
-                    board.CleanUpBoard(Players);
+                    playersToRemove.Add(player);
+                    message.QuitMessage(player);
+                    player.Symbol = '.';
+                    renderer.DisplayBoard(Players);
                 }
 
                 else
@@ -46,6 +49,7 @@ namespace TicTakToeApp
 
                     if (player.DidWin())
                     {
+                        renderer.DisplayBoard(Players);
                         message.WinMessage(player);
                         return true;
                     }
@@ -54,13 +58,23 @@ namespace TicTakToeApp
                 }
             }
 
+            RemoveDeadPlayers(playersToRemove);
             return false;
         }
 
-        public void RemovePlayer(Player player)
+        private void RemoveDeadPlayers(List<Player> playersToRemove)
+        {
+            foreach (var player in playersToRemove)
+            {
+                Players.Remove(player);
+            }
+        }
+
+        /*    public void RemovePlayer(Player player)
         {
             message.QuitMessage(player);
-            Players.Remove(player);   
-        }
+            
+            //Players.Remove(player);   
+        }*/
     }
 }

@@ -16,7 +16,10 @@ namespace TicTakToeApp
             foreach (var player in players)
             {
                 foreach (var move in player.Moves)
-                    board[move.X - 1, move.Y - 1] = player.Symbol;
+                {
+                    if(move.X>0 && move.X<=LengthOfBoard && move.Y>0 && move.Y<= LengthOfBoard)
+                        board[move.X - 1, move.Y - 1] = player.Symbol;   
+                }      
             }
 
             for (var i = 0; i < LengthOfBoard; i++)

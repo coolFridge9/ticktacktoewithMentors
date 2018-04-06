@@ -35,25 +35,25 @@ namespace TicTakToeWIthKaren
         }
 
         [Fact]
-        public void RecreateBasedOnMultiplePlayersMoves()
+        public void RemoveAPlayerFromBoard()
         {
             var player = new Player('O',new HumanMover());
             player.AddMove(new Move(1,1));
-            player.AddMove(new Move(2,3));
-            
-            var player2 = new Player('X',new HumanMover());
-            player2.AddMove(new Move(3,2));
-            
+        
             var board = new Board();
-            board.CleanUpBoard(new List<Player> {player, player2});
-
-            var expected = new List<Move> {new Move(1, 1), new Move(2, 3), new Move(3,2)};
             
+            board.AddMove(new Move(1,1));
+            board.AddMove(new Move(2,3));
+            board.AddMove(new Move(3,2));
+            
+            board.RemovePlayer(player);
+
+            var expected = new List<Move> {new Move(2, 3), new Move(3,2)};
             Assert.True(ComparePlayerLists(expected,board.allMoves));
             
         }
         
-        [Fact]
+       /* [Fact]
         public void RecreateBasedOnPlayersMoves()
         {
             var player = new Player('O',new HumanMover());
@@ -66,7 +66,7 @@ namespace TicTakToeWIthKaren
             
             Assert.True(ComparePlayerLists(expected,board.allMoves));
             
-        }
+        }*/
 
         [Fact]
         public void ReturnMostRecentMove()

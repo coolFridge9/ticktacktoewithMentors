@@ -25,13 +25,10 @@ namespace TicTakToeApp
             return WinChecker.ContainsAllItems(allMoves, moveInList);
         }
 
-        public void CleanUpBoard(List<Player> players)
+        public void RemovePlayer(Player player)
         {
-            allMoves = new List<Move>();
-            foreach (var player in players)
-            {
-                allMoves = allMoves.Concat(player.Moves).ToList();
-            }
+            foreach (var move in player.Moves)
+                allMoves.Remove(move);  
         }
 
         public Move GetMostRecentMove()

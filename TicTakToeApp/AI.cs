@@ -19,8 +19,8 @@ namespace TicTakToeApp
         private Move GetRandomMove(Move move)
         {
             var random = new Random();
-            var x = random.Next(-1, 1)+move.X;
-            var y = random.Next(-1, 1)+move.Y;
+            var x = random.Next(1, 2)+move.X;
+            var y = random.Next(1, 2)+move.Y;
             
             return new Move(x,y);
             
