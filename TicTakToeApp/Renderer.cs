@@ -19,17 +19,14 @@ namespace TicTakToeApp
             foreach (var player in players)
             {
                 foreach (var move in player.Moves)
-                {
-                    if(move.X>0 && move.Y>0)
-                        board[move.X - 1, move.Y - 1] = player.Symbol;   
-                }      
+                    board[move.Y - 1, move.X - 1] = player.Symbol;         
             }
 
             for (var i = 0; i < BoardWidth; i++)
             {
                 for (var j = 0; j < BoardLength; j++)
                 {
-                    boardString += board[j, i];
+                    boardString += board[i, j];
                 }
                 boardString += '\n';
             }

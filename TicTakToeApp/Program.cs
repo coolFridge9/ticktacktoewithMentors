@@ -10,8 +10,8 @@ namespace TicTakToeApp
             
             var game = new GameEngine();
             game.AddNewPlayer(new Player('X',new HumanMover()));
-            game.AddNewPlayer(new Player('O',new HumanMover()));
-            //game.AddNewPlayer(new Player('A',new AIMover()));
+            //game.AddNewPlayer(new Player('O',new HumanMover()));
+            game.AddNewPlayer(new Player('A',new AIMover()));
             game.RunGame();
         }
     }
