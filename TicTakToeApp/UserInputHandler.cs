@@ -16,7 +16,7 @@ namespace TicTakToeApp
 
         public bool IsValid(string input)
         {
-            Regex format = new Regex("^q$|^-?[0-9],-?[0-9]$");
+            Regex format = new Regex("^q$|^[1-9],[1-9]$");
             return format.IsMatch(input);
         }
 

@@ -8,9 +8,9 @@ namespace TicTakToeWIthKaren
         
         [Theory]
         [InlineData("1,1")]
-        [InlineData("-3,2")]
+        [InlineData("3,2")]
         [InlineData("q")]
-        [InlineData("-2,-2")]
+        [InlineData("2,2")]
         public void ValidateCorrectInput(string input)
         {
             var inputHandler = new UserInputHandler();
@@ -22,6 +22,8 @@ namespace TicTakToeWIthKaren
         [InlineData("1,1,")]
         [InlineData(",1,1")]
         [InlineData("a1,2r")]
+        [InlineData("-2,-2")]
+        [InlineData("0,0")]
         public void ValidateInorrectInput(string input)
         {
             var inputHandler = new UserInputHandler();

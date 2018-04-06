@@ -64,8 +64,6 @@ namespace TicTakToeWIthKaren
             Assert.Equal(result.X,1);
             Assert.Equal(result.Y,2);
         }
-        
-        [Fact]
 
         
 
